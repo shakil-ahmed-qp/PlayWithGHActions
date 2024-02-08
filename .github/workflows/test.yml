@@ -27,7 +27,7 @@ jobs:
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
-          auth: ${{ secrets.GIST_SECRET }}
+          auth: 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
           # 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
 
           gistID: f7c67fe390bd5c1fb3be032d6fa9140f
