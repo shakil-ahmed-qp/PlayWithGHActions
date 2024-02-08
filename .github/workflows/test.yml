@@ -27,7 +27,7 @@ jobs:
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
-          auth: 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
+          auth: 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
           # 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
           gistID: f7c67fe390bd5c1fb3be032d6fa9140f
           filename: test.json
