@@ -29,7 +29,7 @@ jobs:
         with:
           auth: ${{ secrets.GIST_SECRET }}
           # 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
-          gistID: 1889f159be6af42e2a2bc686649b1c53
+          gistID: 01cb2401de1060cb03177ef1de9429bd7086c63a
           filename: test.json
           label: Test Coverage
           message: 50%
