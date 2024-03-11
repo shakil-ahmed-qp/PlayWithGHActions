@@ -25,7 +25,7 @@ jobs:
         run: npm ci
       - name: Get coverage perecentage
         run:
-          SUMMARY="$(npm test -- --coverage --coverageReporters="text-summary""
+          SUMMARY="$(npm test -- --coverage --coverageReporters=text-summary)"
           TOKENS=($SUMMARY)
           echo "COVERAGE=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
       - name: Create Coverage Badge
