@@ -37,6 +37,6 @@ jobs:
           gistID: f7c67fe390bd5c1fb3be032d6fa9140f
           filename: test.json
           label: Test Coverage
-          message: 50%
+          message: 55%
           color: green
           namedLogo: jest
