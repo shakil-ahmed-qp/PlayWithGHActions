@@ -27,6 +27,7 @@ jobs:
         run: |
           coverage=$(npm test -- --coverage --coverageReporters="text-summary" | grep -oE 'Lines\s+:\s+([0-9]+(\.[0-9]+)?)%' | grep -oE '[0-9]+(\.[0-9]+)?')
           echo "::set-output name=coverage_percentage::$coverage"
+          process.env.COVERAGE = $coverage
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
@@ -37,6 +38,6 @@ jobs:
           # f7c67fe390bd5c1fb3be032d6fa9140f
           filename: test.json
           label: Test Coverage
-          message: ${{ coverage_percentage }}
+          message: ${{ env.COVERAGE }}
           color: green
           namedLogo: jest
