@@ -27,7 +27,7 @@ jobs:
         run: |
           coverage=$(npm test -- --coverage --coverageReporters="text-summary" | grep -oE 'Lines\s+:\s+([0-9]+(\.[0-9]+)?)%' | grep -oE '[0-9]+(\.[0-9]+)?')
           echo "::set-output name=coverage_percentage::$coverage"
-          process.env.COVERAGE = $coverage
+          echo "COVERAGE=$(echo ${coverage})" >> $GITHUB_ENV
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
