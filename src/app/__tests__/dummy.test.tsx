@@ -17,4 +17,9 @@ describe("Page component", () => {
     const result = findNumbers("");
     expect(result).toEqual([]);
   });
+
+  it("should return an array with one number when given a string with only one number at the beginning of the string", () => {
+    const result = findNumbers("456xyz");
+    expect(result).toEqual([456]);
+  });
 });
